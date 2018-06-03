@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F595A26C-A6A0-45E0-9AD7-D5D5C2651F4C}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>K8fly</AssemblyName>
+    <OutputType>WinExe</OutputType>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="K8Reply\K8IPselect.cs" />
+    <Compile Include="K8_Dragon_Claw_Blade\Properties\Resources.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="K8_Fly_Cutter\frmAddExploit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="K8_Fly_Cutter\frmEditWebShell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="K8_Fly_Cutter\frmInputExpDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="K8_Fly_Cutter\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="K8_Fly_Cutter\K8WebOperation.cs" />
+    <Compile Include="K8_Web_Submit\frmDiyLoginCrack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="K8_Web_Submit\frmphpMyAdminCrack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="K8_Fly_Cutter\K8crack.cs" />
+    <Compile Include="K8_Web_Submit\K8_webCrack\frmWebShellCrack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="K8_Web_Submit\k8submit.cs" />
+    <Compile Include="K8_Fly_Cutter\Program.cs" />
+    <Compile Include="K8_Fly_Cutter\WriteLogHelper.cs" />
+    <Compile Include="K8_Dragon_Claw_Blade\Properties\Settings.cs" />
+    <Compile Include="Model\ModelK8Exp.cs" />
+    <Compile Include="Model\ModelK8shell.cs" />
+    <Compile Include="DBUtility\K8accessHelper.cs" />
+    <Compile Include="DAL\DALk8Exp.cs" />
+    <Compile Include="DAL\DALk8shell.cs" />
+    <Compile Include="BLL\BLLk8EXP.cs" />
+    <Compile Include="BLL\BLLk8shell.cs" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="K8_Dragon_Claw_Blade\Properties\Resources.resx">
+      <DependentUpon>Resources.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="K8_Fly_Cutter\frmAddExploit.resx">
+      <DependentUpon>frmAddExploit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="K8_Fly_Cutter\frmEditWebShell.resx">
+      <DependentUpon>frmEditWebShell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="K8_Fly_Cutter\frmInputExpDB.resx">
+      <DependentUpon>frmInputExpDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="K8_Fly_Cutter\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="K8_Web_Submit\frmDiyLoginCrack.resx">
+      <DependentUpon>frmDiyLoginCrack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="K8_Web_Submit\frmphpMyAdminCrack.resx">
+      <DependentUpon>frmphpMyAdminCrack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="K8_Web_Submit\K8_webCrack\frmWebShellCrack.resx">
+      <DependentUpon>frmWebShellCrack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
